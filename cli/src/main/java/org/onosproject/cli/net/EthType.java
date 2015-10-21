@@ -42,7 +42,7 @@ public enum EthType {
      *
      * @param value value to use when this EthType is seen
      */
-    private EthType(short value) {
+    EthType(short value) {
         this.value = value;
     }
 

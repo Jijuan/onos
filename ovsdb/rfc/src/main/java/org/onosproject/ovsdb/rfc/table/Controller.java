@@ -46,7 +46,7 @@ public class Controller extends AbstractOvsdbTableService {
 
         private final String columnName;
 
-        private ControllerColumn(String columnName) {
+        ControllerColumn(String columnName) {
             this.columnName = columnName;
         }
 
@@ -79,7 +79,7 @@ public class Controller extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getTargetColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -107,7 +107,7 @@ public class Controller extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getBurstLimitColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -136,7 +136,7 @@ public class Controller extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getRateLimitColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -163,7 +163,7 @@ public class Controller extends AbstractOvsdbTableService {
                                                              "connection_mode",
                                                              "getConnectionModeColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -192,7 +192,7 @@ public class Controller extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getEnableAsyncMessagesColumn",
                                                              VersionNum.VERSION670);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -221,7 +221,7 @@ public class Controller extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getExternalIdsColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -249,7 +249,7 @@ public class Controller extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getLocalNetmaskColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -277,7 +277,7 @@ public class Controller extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getLocalGatewayColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -305,7 +305,7 @@ public class Controller extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getStatusColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -333,7 +333,7 @@ public class Controller extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getRoleColumn",
                                                              VersionNum.VERSION110);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -361,7 +361,7 @@ public class Controller extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getInactivityProbeColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -390,7 +390,7 @@ public class Controller extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getIsConnectedColumn",
                                                              VersionNum.VERSION110);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -418,7 +418,7 @@ public class Controller extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getOtherConfigColumn",
                                                              VersionNum.VERSION680);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -446,7 +446,7 @@ public class Controller extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getMaxBackoffColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -474,7 +474,7 @@ public class Controller extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getLocalIpColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -504,7 +504,7 @@ public class Controller extends AbstractOvsdbTableService {
                                                              "getDiscoverUpdateResolvConfColumn",
                                                              VersionNum.VERSION100,
                                                              VersionNum.VERSION300);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -535,7 +535,7 @@ public class Controller extends AbstractOvsdbTableService {
                                                              "getDiscoverAcceptRegexColumn",
                                                              VersionNum.VERSION100,
                                                              VersionNum.VERSION300);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**

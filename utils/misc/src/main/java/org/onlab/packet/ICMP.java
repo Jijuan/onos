@@ -191,10 +191,7 @@ public class ICMP extends BasePacket {
         if (this.icmpCode != other.icmpCode) {
             return false;
         }
-        if (this.checksum != other.checksum) {
-            return false;
-        }
-        return true;
+        return this.checksum == other.checksum;
     }
 
     /**

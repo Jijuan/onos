@@ -33,35 +33,35 @@ interface McastRoute {
      *
      * @return group address
      */
-    public IpPrefix getGaddr();
+    IpPrefix getGaddr();
 
     /**
      * Gets the source address.
      *
      * @return the source address
      */
-    public IpPrefix getSaddr();
+    IpPrefix getSaddr();
 
     /**
      * Determines if this is an IPv4 multicast route.
      *
      * @return true if it is an IPv4 route
      */
-    public boolean isIp4();
+    boolean isIp4();
 
     /**
      * Determines if this is an IPv6 multicast route.
      *
      * @return true if it is an IPv6 route
      */
-    public boolean isIp6();
+    boolean isIp6();
 
     /**
      * Get the dirty state.
      *
      * @return whether this route is dirty or not.
      */
-    public boolean getDirty();
+    boolean getDirty();
 
     /**
      * Set the dirty state to indicate that something changed.
@@ -69,7 +69,7 @@ interface McastRoute {
      *
      * @param dirty set the dirty bit
      */
-    public void setDirty(boolean dirty);
+    void setDirty(boolean dirty);
 
     /**
      * Add the ingress ConnectPoint.
@@ -77,7 +77,7 @@ interface McastRoute {
      * @param cpstr string representing a ConnectPoint
      * @return whether ingress has been added, only add if ingressPoint is null
      */
-    public boolean addIngressPoint(String cpstr);
+    boolean addIngressPoint(String cpstr);
 
     /**
      * Add the ingress ConnectPoint.
@@ -85,14 +85,14 @@ interface McastRoute {
      * @param cp the ConnectPoint of incoming traffic.
      * @return whether ingress has been added, only add if ingressPoint is null
      */
-    public boolean addIngressPoint(ConnectPoint cp);
+    boolean addIngressPoint(ConnectPoint cp);
 
     /**
      * Get the ingress connect point.
      *
      * @return the ingress connect point
      */
-    public McastConnectPoint getIngressPoint();
+    McastConnectPoint getIngressPoint();
 
     /**
      * Add an egress connect point.
@@ -100,7 +100,7 @@ interface McastRoute {
      * @param cp the egress McastConnectPoint to be added
      * @return return the McastConnectPoint
      */
-    public McastConnectPoint addEgressPoint(ConnectPoint cp);
+    McastConnectPoint addEgressPoint(ConnectPoint cp);
 
     /**
      * Add an egress connect point.
@@ -108,7 +108,7 @@ interface McastRoute {
      * @param connectPoint deviceId/portNum
      * @return return the McastConnectPoint
      */
-    public McastConnectPoint addEgressPoint(String connectPoint);
+    McastConnectPoint addEgressPoint(String connectPoint);
 
     /**
      * Add an egress connect point.
@@ -117,7 +117,7 @@ interface McastRoute {
      * @param interest the protocol that has shown interest in this route
      * @return return the McastConnectPoint
      */
-    public McastConnectPoint addEgressPoint(ConnectPoint cp, McastConnectPoint.JoinSource interest);
+    McastConnectPoint addEgressPoint(ConnectPoint cp, McastConnectPoint.JoinSource interest);
 
     /**
      * Add an egress connect point.
@@ -126,21 +126,21 @@ interface McastRoute {
      * @param interest the protocol that has shown interest in this route
      * @return return the McastConnectPoint
      */
-    public McastConnectPoint addEgressPoint(String connectPoint, McastConnectPoint.JoinSource interest);
+    McastConnectPoint addEgressPoint(String connectPoint, McastConnectPoint.JoinSource interest);
 
     /**
      * Get the egress connect points.
      *
      * @return a set of egress connect points
      */
-    public Set<McastConnectPoint> getEgressPoints();
+    Set<McastConnectPoint> getEgressPoints();
 
     /**
      * Get the egress connect points.
      *
      * @return a set of egress connect points
      */
-    public Set<ConnectPoint> getEgressConnectPoints();
+    Set<ConnectPoint> getEgressConnectPoints();
 
     /**
      * Find the egress connect point if it exists.
@@ -148,7 +148,7 @@ interface McastRoute {
      * @param cp ConnectPoint to search for
      * @return the connect point when found, null otherwise.
      */
-    public McastConnectPoint findEgressConnectPoint(ConnectPoint cp);
+    McastConnectPoint findEgressConnectPoint(ConnectPoint cp);
 
     /**
      * remove Interest from a McastConnectPoint.
@@ -157,49 +157,49 @@ interface McastRoute {
      * @param interest the protocol interested in this multicast stream
      * @return whether or not interest was removed
      */
-    public boolean removeInterest(McastConnectPoint mcp, McastConnectPoint.JoinSource interest);
+    boolean removeInterest(McastConnectPoint mcp, McastConnectPoint.JoinSource interest);
 
     /**
      * Increment the punt count.
      */
-    public void incrementPuntCount();
+    void incrementPuntCount();
 
     /**
      * Get the punt count.
      *
      * @return the punt count
      */
-    public int getPuntCount();
+    int getPuntCount();
 
     /**
      * Have the McastIntentManager create an intent, attempt to
      * install the intent and then save the key.
      */
-    public void setIntent();
+    void setIntent();
 
     /**
      * Set the Intent key.
      *
      * @param intent intent
      */
-    public void setIntent(SinglePointToMultiPointIntent intent);
+    void setIntent(SinglePointToMultiPointIntent intent);
 
     /**
      * Withdraw the intent if it has been installed.
      */
-    public void withdrawIntent();
+    void withdrawIntent();
 
     /**
      * Get the intent key.
      *
      * @return the intentKey
      */
-    public Key getIntentKey();
+    Key getIntentKey();
 
     /**
      * Pretty print the the route.
      *
      * @return a pretty string
      */
-    public String toString();
+    String toString();
 }

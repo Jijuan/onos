@@ -117,10 +117,7 @@ public class DHCPOption {
         if (!Arrays.equals(this.data, other.data)) {
             return false;
         }
-        if (this.length != other.length) {
-            return false;
-        }
-        return true;
+        return this.length == other.length;
     }
 
     /*

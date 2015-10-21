@@ -715,7 +715,7 @@ public class EventuallyConsistentMapImplTest {
             MessageSubject subject,
             ClusterCommunicationService clusterCommunicator) {
         reset(clusterCommunicator);
-        clusterCommunicator.<T>multicast(eq(message), eq(subject), anyObject(Function.class), anyObject(Set.class));
+        clusterCommunicator.multicast(eq(message), eq(subject), anyObject(Function.class), anyObject(Set.class));
         expectLastCall().anyTimes();
         replay(clusterCommunicator);
     }
@@ -732,7 +732,7 @@ public class EventuallyConsistentMapImplTest {
     private static <T> void expectSpecificMulticastMessage(T message, MessageSubject subject,
                            ClusterCommunicationService clusterCommunicator) {
         reset(clusterCommunicator);
-        clusterCommunicator.<T>multicast(eq(message), eq(subject), anyObject(Function.class), anyObject(Set.class));
+        clusterCommunicator.multicast(eq(message), eq(subject), anyObject(Function.class), anyObject(Set.class));
         expectLastCall().anyTimes();
         replay(clusterCommunicator);
     }
@@ -769,7 +769,7 @@ public class EventuallyConsistentMapImplTest {
      */
     private void expectBroadcastMessage(ClusterCommunicationService clusterCommunicator) {
         reset(clusterCommunicator);
-        clusterCommunicator.<AbstractEvent>multicast(
+        clusterCommunicator.multicast(
                 anyObject(AbstractEvent.class),
                 anyObject(MessageSubject.class),
                 anyObject(Function.class),

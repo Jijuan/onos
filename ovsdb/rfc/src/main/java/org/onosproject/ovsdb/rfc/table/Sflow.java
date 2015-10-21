@@ -37,7 +37,7 @@ public class Sflow extends AbstractOvsdbTableService {
 
         private final String columnName;
 
-        private SflowColumn(String columnName) {
+        SflowColumn(String columnName) {
             this.columnName = columnName;
         }
 
@@ -67,7 +67,7 @@ public class Sflow extends AbstractOvsdbTableService {
     public Column getTargetsColumn() {
         ColumnDescription columndesc = new ColumnDescription(SflowColumn.TARGETS.columnName(),
                                                              "getTargetsColumn", VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -89,7 +89,7 @@ public class Sflow extends AbstractOvsdbTableService {
     public Column getAgentColumn() {
         ColumnDescription columndesc = new ColumnDescription(SflowColumn.AGENT.columnName(),
                                                              "getAgentColumn", VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -111,7 +111,7 @@ public class Sflow extends AbstractOvsdbTableService {
     public Column getExternalIdsColumn() {
         ColumnDescription columndesc = new ColumnDescription(SflowColumn.EXTERNALIDS.columnName(),
                                                              "getExternalIdsColumn", VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -133,7 +133,7 @@ public class Sflow extends AbstractOvsdbTableService {
     public Column getHeaderColumn() {
         ColumnDescription columndesc = new ColumnDescription(SflowColumn.HAEDER.columnName(),
                                                              "getHeaderColumn", VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -155,7 +155,7 @@ public class Sflow extends AbstractOvsdbTableService {
     public Column getPollingColumn() {
         ColumnDescription columndesc = new ColumnDescription(SflowColumn.POLLING.columnName(),
                                                              "getPollingColumn", VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -177,7 +177,7 @@ public class Sflow extends AbstractOvsdbTableService {
     public Column getSamplingColumn() {
         ColumnDescription columndesc = new ColumnDescription(SflowColumn.SAMPLING.columnName(),
                                                              "getSamplingColumn", VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**

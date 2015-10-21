@@ -35,7 +35,7 @@ public enum DHCPPacketType {
 
     protected int value;
 
-    private DHCPPacketType(final int value) {
+    DHCPPacketType(final int value) {
         this.value = value;
     }
 

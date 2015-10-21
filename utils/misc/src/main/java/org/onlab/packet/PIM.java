@@ -181,10 +181,7 @@ public class PIM extends BasePacket {
         if (this.version != other.version) {
             return false;
         }
-        if (this.checksum != other.checksum) {
-            return false;
-        }
-        return true;
+        return this.checksum == other.checksum;
     }
 
     /**

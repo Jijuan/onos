@@ -269,18 +269,12 @@ public class IntentData { //FIXME need to make this "immutable"
             return true;
 
         case FAILED:
-            if (currentState == FAILED) {
-                return false;
-            }
-            return true;
+            return currentState != FAILED;
 
-        case CORRUPT:
-            if (currentState == CORRUPT) {
-                return false;
-            }
-            return true;
+            case CORRUPT:
+                return currentState != CORRUPT;
 
-        case PURGE_REQ:
+            case PURGE_REQ:
             // TODO we should enforce that only WITHDRAWN intents can be purged
             return true;
 

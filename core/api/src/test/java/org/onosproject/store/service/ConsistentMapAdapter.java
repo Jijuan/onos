@@ -108,7 +108,10 @@ public class ConsistentMapAdapter<K, V> implements ConsistentMap<K, V> {
     }
 
     @Override
-    public Versioned<V> putIfAbsent(K key, V value) {
+    public Versioned<V> putIfAbsent(K key, V value) { return null; }
+
+    @Override
+    public Versioned<V> putIfPresent(K key, V value) {
         return null;
     }
 

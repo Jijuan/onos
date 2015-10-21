@@ -265,10 +265,7 @@ public class UDP extends BasePacket {
         if (this.length != other.length) {
             return false;
         }
-        if (this.sourcePort != other.sourcePort) {
-            return false;
-        }
-        return true;
+        return this.sourcePort == other.sourcePort;
     }
 
     /**

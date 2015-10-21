@@ -31,7 +31,7 @@ public class ConditionSerializer extends JsonSerializer<Condition> {
     @Override
     public void serialize(Condition condition, JsonGenerator generator,
                           SerializerProvider provider)
-            throws IOException, JsonProcessingException {
+            throws IOException {
         generator.writeStartArray();
         generator.writeString(condition.getColumn());
         generator.writeString(condition.getFunction().function());

@@ -445,11 +445,8 @@ public class HostLocationProviderTest {
         public boolean isInfrastructure(Topology topology,
                                         ConnectPoint connectPoint) {
             //simulate DPID3 as an infrastructure switch
-            if ((connectPoint.deviceId()).equals(deviceId(DEV3)) ||
-                    connectPoint.deviceId().equals(deviceId(DEV6))) {
-                return true;
-            }
-            return false;
+            return (connectPoint.deviceId()).equals(deviceId(DEV3)) ||
+                    connectPoint.deviceId().equals(deviceId(DEV6));
         }
     }
 

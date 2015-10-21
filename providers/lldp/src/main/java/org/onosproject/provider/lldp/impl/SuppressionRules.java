@@ -54,10 +54,7 @@ public class SuppressionRules {
             return true;
         }
         final Annotations annotations = device.annotations();
-        if (containsSuppressionAnnotation(annotations)) {
-            return true;
-        }
-        return false;
+        return containsSuppressionAnnotation(annotations);
     }
 
     public boolean isSuppressed(Port port) {
@@ -69,10 +66,7 @@ public class SuppressionRules {
         }
 
         final Annotations annotations = port.annotations();
-        if (containsSuppressionAnnotation(annotations)) {
-            return true;
-        }
-        return false;
+        return containsSuppressionAnnotation(annotations);
     }
 
     private boolean containsSuppressionAnnotation(final Annotations annotations) {

@@ -37,7 +37,7 @@ public class Qos extends AbstractOvsdbTableService {
 
         private final String columnName;
 
-        private QosColumn(String columnName) {
+        QosColumn(String columnName) {
             this.columnName = columnName;
         }
 
@@ -67,7 +67,7 @@ public class Qos extends AbstractOvsdbTableService {
     public Column getQueuesColumn() {
         ColumnDescription columndesc = new ColumnDescription(QosColumn.QUEUES.columnName(),
                                                              "getQueuesColumn", VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -89,7 +89,7 @@ public class Qos extends AbstractOvsdbTableService {
     public Column getTypeColumn() {
         ColumnDescription columndesc = new ColumnDescription(QosColumn.TYPE.columnName(), "getTypeColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -111,7 +111,7 @@ public class Qos extends AbstractOvsdbTableService {
     public Column getOtherConfigColumn() {
         ColumnDescription columndesc = new ColumnDescription(QosColumn.OTHERCONFIG.columnName(),
                                                              "getOtherConfigColumn", VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -133,7 +133,7 @@ public class Qos extends AbstractOvsdbTableService {
     public Column getExternalIdsColumn() {
         ColumnDescription columndesc = new ColumnDescription(QosColumn.EXTERNALIDS.columnName(),
                                                              "getExternalIdsColumn", VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**

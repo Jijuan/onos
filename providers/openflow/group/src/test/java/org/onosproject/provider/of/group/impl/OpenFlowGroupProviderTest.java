@@ -143,7 +143,7 @@ public class OpenFlowGroupProviderTest {
         groupBuilder.setGroupType(OFGroupType.ALL);
         groupBuilder.setGroup(OFGroup.of(1));
         errorBuilder.setCode(OFGroupModFailedCode.GROUP_EXISTS);
-        errorBuilder.setXid(provider.getXidAndAdd(0) - 1);
+        errorBuilder.setXid(OpenFlowGroupProvider.getXidAndAdd(0) - 1);
 
         controller.processPacket(dpid1, errorBuilder.build());
 

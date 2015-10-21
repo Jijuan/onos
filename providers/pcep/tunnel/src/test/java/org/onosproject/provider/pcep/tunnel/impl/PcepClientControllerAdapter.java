@@ -177,13 +177,8 @@ public class PcepClientControllerAdapter implements PcepClientController {
 
         @Override
         public boolean validActivation(PccId pccId) {
-            if (connectedClients.get(pccId) == null) {
-                //log.error("Trying to activate client but is not in "
-                //        + "connected switches: pccIp {}. Aborting ..", pccIpAddress.toString());
-                return false;
-            }
+            return connectedClients.get(pccId) != null;
 
-            return true;
         }
 
         @Override

@@ -246,11 +246,8 @@ public class BGPConfig implements BGPCfg {
     public boolean isPeerConnectable(String routerid) {
         BGPPeerCfg lspeer = this.bgpPeerTree.get(routerid);
 
-        if ((lspeer != null) && lspeer.getState().equals(BGPPeerCfg.State.IDLE)) {
-            return true;
-        }
+        return (lspeer != null) && lspeer.getState().equals(BGPPeerCfg.State.IDLE);
 
-        return false;
     }
 
     @Override

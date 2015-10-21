@@ -44,7 +44,7 @@ public class OpenVSwitch extends AbstractOvsdbTableService {
 
         private final String columnName;
 
-        private OpenVSwitchColumn(String columnName) {
+        OpenVSwitchColumn(String columnName) {
             this.columnName = columnName;
         }
 
@@ -77,7 +77,7 @@ public class OpenVSwitch extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getBridgesColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -192,7 +192,7 @@ public class OpenVSwitch extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getOtherConfigColumn",
                                                              VersionNum.VERSION510);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -220,7 +220,7 @@ public class OpenVSwitch extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getExternalIdsColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -248,7 +248,7 @@ public class OpenVSwitch extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getNextConfigColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -276,7 +276,7 @@ public class OpenVSwitch extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getCurrentConfigColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -305,7 +305,7 @@ public class OpenVSwitch extends AbstractOvsdbTableService {
                                                              "getCapabilitiesColumn",
                                                              VersionNum.VERSION100,
                                                              VersionNum.VERSION670);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -334,7 +334,7 @@ public class OpenVSwitch extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getStatisticsColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -362,7 +362,7 @@ public class OpenVSwitch extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getOvsVersionColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -390,7 +390,7 @@ public class OpenVSwitch extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getDbVersionColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -418,7 +418,7 @@ public class OpenVSwitch extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getSystemTypeColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -446,7 +446,7 @@ public class OpenVSwitch extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getSystemVersionColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**

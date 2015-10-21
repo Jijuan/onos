@@ -38,7 +38,7 @@ public enum IpProtocol {
      *
      * @param value value to use when this IpProtocol is seen
      */
-    private IpProtocol(short value) {
+    IpProtocol(short value) {
         this.value = value;
     }
 

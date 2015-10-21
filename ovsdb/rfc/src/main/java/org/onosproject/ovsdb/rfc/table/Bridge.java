@@ -45,7 +45,7 @@ public class Bridge extends AbstractOvsdbTableService {
 
         private final String columnName;
 
-        private BridgeColumn(String columnName) {
+        BridgeColumn(String columnName) {
             this.columnName = columnName;
         }
 
@@ -78,7 +78,7 @@ public class Bridge extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getNameColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -120,7 +120,7 @@ public class Bridge extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getDatapathTypeColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -148,7 +148,7 @@ public class Bridge extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getDatapathIdColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -176,7 +176,7 @@ public class Bridge extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getStpEnableColumn",
                                                              VersionNum.VERSION620);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -204,7 +204,7 @@ public class Bridge extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getPortsColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -232,7 +232,7 @@ public class Bridge extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getMirrorsColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -260,7 +260,7 @@ public class Bridge extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getNetflowColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -288,7 +288,7 @@ public class Bridge extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getSflowColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -316,7 +316,7 @@ public class Bridge extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getIpfixColumn",
                                                              VersionNum.VERSION710);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -344,7 +344,7 @@ public class Bridge extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getControllerColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -372,7 +372,7 @@ public class Bridge extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getProtocolsColumn",
                                                              VersionNum.VERSION6111);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -400,7 +400,7 @@ public class Bridge extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getFailModeColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -428,7 +428,7 @@ public class Bridge extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getStatusColumn",
                                                              VersionNum.VERSION620);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -456,7 +456,7 @@ public class Bridge extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getOtherConfigColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -484,7 +484,7 @@ public class Bridge extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getExternalIdsColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -512,7 +512,7 @@ public class Bridge extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getFloodVlansColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -540,7 +540,7 @@ public class Bridge extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getFlowTablesColumn",
                                                              VersionNum.VERSION650);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**

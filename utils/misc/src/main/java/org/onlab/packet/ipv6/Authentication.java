@@ -257,10 +257,7 @@ public class Authentication extends BasePacket implements IExtensionHeader {
         if (this.sequence != other.sequence) {
             return false;
         }
-        if (!Arrays.equals(this.integrityCheck, other.integrityCheck)) {
-            return false;
-        }
-        return true;
+        return Arrays.equals(this.integrityCheck, other.integrityCheck);
     }
 
     /**

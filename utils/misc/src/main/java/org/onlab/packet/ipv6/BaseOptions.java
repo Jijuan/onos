@@ -216,10 +216,7 @@ public class BaseOptions extends BasePacket implements IExtensionHeader {
         if (!Arrays.equals(this.options, other.options)) {
             return false;
         }
-        if (this.type != other.type) {
-            return false;
-        }
-        return true;
+        return this.type == other.type;
     }
 
     /**

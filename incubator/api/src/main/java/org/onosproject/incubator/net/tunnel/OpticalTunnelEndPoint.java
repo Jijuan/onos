@@ -34,7 +34,7 @@ import org.onosproject.net.Provided;
 public interface OpticalTunnelEndPoint extends TunnelEndPoint, Annotated, Provided, NetworkResource {
 
     /** Represents coarse tunnel point type classification. */
-    public enum Type {
+    enum Type {
         /**
          * Signifies optical data unit-based tunnel point.
          */

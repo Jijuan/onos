@@ -48,7 +48,7 @@ public class NetconfDevice {
      * inactive. This state infomation will help Device Creator to add or delete
      * the device from the core.
      */
-    public static enum DeviceState {
+    public enum DeviceState {
         /* Used to specify Active state of the device */
         ACTIVE,
         /* Used to specify inactive state of the device */

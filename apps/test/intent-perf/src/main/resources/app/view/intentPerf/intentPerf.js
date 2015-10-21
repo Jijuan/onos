@@ -200,7 +200,7 @@
                 .call(x.axis = d3.svg.axis().scale(x).orient("bottom"));
 
             d3.select("#intent-perf-yl")
-                .call(d3.svg.axis().scale(y).orient("left"))
+                .call(d3.svg.axis().scale(y).orient("left"));
             d3.select("#intent-perf-yr")
                 .attr("transform", "translate(" + width + " ,0)")
                 .call(d3.svg.axis().scale(y).orient("right"))

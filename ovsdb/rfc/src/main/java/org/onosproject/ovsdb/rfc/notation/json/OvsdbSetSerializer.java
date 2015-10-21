@@ -32,7 +32,7 @@ public class OvsdbSetSerializer extends JsonSerializer<OvsdbSet> {
     @Override
     public void serialize(OvsdbSet set, JsonGenerator generator,
                           SerializerProvider provider)
-            throws IOException, JsonProcessingException {
+            throws IOException {
         generator.writeStartArray();
         generator.writeString("set");
         generator.writeStartArray();

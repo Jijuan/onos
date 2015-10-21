@@ -61,11 +61,7 @@ public class TedCapabilityTlv implements PcepValueType {
         this.isRawValueSet = true;
         int temp = rawValue;
         temp = temp & RFLAG_CHECK;
-        if (temp == SET) {
-            this.bRFlag = true;
-        } else {
-            this.bRFlag = false;
-        }
+        this.bRFlag = temp == SET;
 
     }
 

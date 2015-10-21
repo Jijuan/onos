@@ -185,11 +185,7 @@ public class PcInitiatedLspRequestVer1 implements PcInitiatedLspRequest {
                 bRFlag = srpObject.getRFlag();
             }
 
-            if (bRFlag) {
-                this.bIsbRFlagSet = true;
-            } else {
-                this.bIsbRFlagSet = false;
-            }
+            this.bIsbRFlagSet = bRFlag;
 
             if (!this.bIsLSPObjectSet) {
                 throw new PcepParseException("LSP Object NOT Set while building PcInitiatedLspRequest");

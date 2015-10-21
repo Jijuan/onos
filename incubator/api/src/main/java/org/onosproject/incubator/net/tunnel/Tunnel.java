@@ -65,7 +65,7 @@ public interface Tunnel extends Annotated, Provided, NetworkResource {
     /**
      * Representation of the tunnel state.
      */
-    public enum State {
+    enum State {
         /**
          * Signifies that a tunnel is currently in a initialized state.
          */

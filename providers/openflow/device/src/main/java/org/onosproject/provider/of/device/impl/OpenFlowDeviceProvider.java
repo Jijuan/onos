@@ -269,7 +269,7 @@ public class OpenFlowDeviceProvider extends AbstractProvider implements DevicePr
     }
 
     private void pushPortMetrics(Dpid dpid, List<OFPortStatsEntry> portStatsEntries) {
-        DeviceId deviceId = DeviceId.deviceId(dpid.uri(dpid));
+        DeviceId deviceId = DeviceId.deviceId(uri(dpid));
         Collection<PortStatistics> stats = buildPortStatistics(deviceId, portStatsEntries);
         providerService.updatePortStatistics(deviceId, stats);
     }
@@ -425,7 +425,7 @@ public class OpenFlowDeviceProvider extends AbstractProvider implements DevicePr
                     LOG.debug("Ports Of{}", portsOf);
                     portsOf.forEach(
                         op -> {
-                            portDescs.add(buildPortDescription(type, (OFObject) op));
+                            portDescs.add(buildPortDescription(type, op));
                         }
                      );
                     });

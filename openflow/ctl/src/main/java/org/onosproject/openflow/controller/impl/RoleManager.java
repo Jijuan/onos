@@ -232,7 +232,7 @@ class RoleManager implements RoleHandler {
         if (expectedRole == receivedRole) {
             log.debug("Received role reply message from {} that matched "
                     + "expected role-reply {} with expectations {}",
-                    new Object[] {sw.getStringId(), receivedRole, expectation});
+                    sw.getStringId(), receivedRole, expectation);
 
             // Done with this RoleReply; Invalidate
             pendingReplies.invalidate(xid);
@@ -283,10 +283,8 @@ class RoleManager implements RoleHandler {
             log.error("Received a error msg {} from sw {} for "
                     + "pending role request {}. Switch driver indicates "
                     + "role-messaging is supported. Possible issues in "
-                    + "switch driver configuration?", new Object[] {
-                            ((OFBadRequestErrorMsg) error).toString(),
-                            sw.getStringId(), errorRole
-                    });
+                    + "switch driver configuration?", ((OFBadRequestErrorMsg) error).toString(),
+                    sw.getStringId(), errorRole);
             return RoleRecvStatus.UNSUPPORTED;
         }
 

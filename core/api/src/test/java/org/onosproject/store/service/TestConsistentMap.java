@@ -174,6 +174,15 @@ public final class TestConsistentMap<K, V> extends ConsistentMapAdapter<K, V> {
     }
 
     @Override
+    public Versioned<V> putIfPresent(K key, V value) {
+        Versioned<V> result = version(map.replace(key, value));
+        if (map.get(key).equals(value)) {
+            notifyListeners(mapName, UPDATE, key, result);
+        }
+        return result;
+    }
+
+    @Override
     public boolean remove(K key, V value) {
         boolean removed = map.remove(key, value);
         if (removed) {

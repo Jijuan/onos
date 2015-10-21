@@ -48,11 +48,7 @@ public class ErrorObjListWithOpen {
     public ErrorObjListWithOpen(LinkedList<PcepErrorObject> errObj, PcepOpenObject openObj) {
         this.llerrorObjList = errObj;
         this.openObject = openObj;
-        if (openObj != null) {
-            isOpenObjectSet = true;
-        } else {
-            isOpenObjectSet = false;
-        }
+        isOpenObjectSet = openObj != null;
     }
 
     /**

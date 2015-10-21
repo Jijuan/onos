@@ -496,10 +496,7 @@ public final class Instructions {
             if (this == obj) {
                 return true;
             }
-            if (obj instanceof DropInstruction) {
-                return true;
-            }
-            return false;
+            return obj instanceof DropInstruction;
         }
     }
 
@@ -530,10 +527,7 @@ public final class Instructions {
             if (this == obj) {
                 return true;
             }
-            if (obj instanceof NoActionInstruction) {
-                return true;
-            }
-            return false;
+            return obj instanceof NoActionInstruction;
         }
     }
 

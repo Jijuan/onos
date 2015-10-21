@@ -36,9 +36,9 @@ public class DependencyCycleTest {
         JavaPackage y = new JavaPackage("y");
         JavaPackage z = new JavaPackage("z");
 
-        DependencyCycle a = new DependencyCycle(Arrays.asList(new JavaPackage[] {x, y, z}), x);
-        DependencyCycle b = new DependencyCycle(Arrays.asList(new JavaPackage[] {y, z, x}), y);
-        DependencyCycle c = new DependencyCycle(Arrays.asList(new JavaPackage[] {z, x, y}), z);
+        DependencyCycle a = new DependencyCycle(Arrays.asList(x, y, z), x);
+        DependencyCycle b = new DependencyCycle(Arrays.asList(y, z, x), y);
+        DependencyCycle c = new DependencyCycle(Arrays.asList(z, x, y), z);
 
         assertEquals("incorrect normalization", a, b);
         assertEquals("incorrect normalization", a, c);
@@ -50,7 +50,7 @@ public class DependencyCycleTest {
         JavaPackage y = new JavaPackage("y");
         JavaPackage z = new JavaPackage("z");
 
-        DependencyCycle a = new DependencyCycle(Arrays.asList(new JavaPackage[] {x, y, z}), x);
+        DependencyCycle a = new DependencyCycle(Arrays.asList(x, y, z), x);
         assertEquals("incorrect toString", "[x, y, z]", a.toShortString());
         assertEquals("incorrect toString",
                      "DependencyCycle{cycle=[" +

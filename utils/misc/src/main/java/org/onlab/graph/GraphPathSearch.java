@@ -26,7 +26,7 @@ import java.util.Set;
  */
 public interface GraphPathSearch<V extends Vertex, E extends Edge<V>> {
 
-    static int ALL_PATHS = -1;
+    int ALL_PATHS = -1;
 
     /**
      * Abstraction of a path search result.

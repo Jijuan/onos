@@ -56,7 +56,7 @@ public final class JsonRpcReaderUtil {
      * @throws JsonParseException JsonParseException
      */
     public static void readToJsonNode(ByteBuf in, List<Object> out, JsonReadContext jrContext)
-            throws JsonParseException, IOException {
+            throws IOException {
         int lastReadBytes = jrContext.getLastReadBytes();
         if (lastReadBytes == 0) {
             if (in.readableBytes() < 4) {
@@ -133,10 +133,7 @@ public final class JsonRpcReaderUtil {
      * @return boolean
      */
     private static boolean isDoubleQuote(Stack<Byte> bufStack) {
-        if (!bufStack.isEmpty() && bufStack.peek() == '"') {
-            return true;
-        }
-        return false;
+        return !bufStack.isEmpty() && bufStack.peek() == '"';
     }
 
     /**

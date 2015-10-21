@@ -320,9 +320,6 @@ public class DistributedDhcpStore implements DhcpStore {
      * @return true if within range, false otherwise
      */
     private boolean ipWithinRange(Ip4Address ip) {
-        if ((ip.toInt() >= startIPRange.toInt()) && (ip.toInt() <= endIPRange.toInt())) {
-            return true;
-        }
-        return false;
+        return (ip.toInt() >= startIPRange.toInt()) && (ip.toInt() <= endIPRange.toInt());
     }
 }

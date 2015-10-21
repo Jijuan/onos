@@ -133,11 +133,8 @@ public class IGMPMembership extends IGMPGroup {
             return false;
         }
         // TODO: make these tolerant of order
-        if (!this.sources.equals(other.sources)) {
-            return false;
-        }
+        return this.sources.equals(other.sources);
 
-        return true;
     }
 
     /*

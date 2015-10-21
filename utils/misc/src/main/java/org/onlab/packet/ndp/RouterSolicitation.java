@@ -119,10 +119,7 @@ public class RouterSolicitation extends BasePacket {
             return false;
         }
         final RouterSolicitation other = (RouterSolicitation) obj;
-        if (!this.options.equals(other.options)) {
-            return false;
-        }
-        return true;
+        return this.options.equals(other.options);
     }
 
     /**

@@ -30,7 +30,7 @@ public class DepthFirstSearch<V extends Vertex, E extends Edge<V>>
     /**
      * Graph edge types as classified by the DFS algorithm.
      */
-    public static enum EdgeType {
+    public enum EdgeType {
         TREE_EDGE, FORWARD_EDGE, BACK_EDGE, CROSS_EDGE
     }
 

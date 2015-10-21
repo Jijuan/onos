@@ -157,10 +157,7 @@ public class EncapSecurityPayload extends BasePacket {
         if (this.securityParamIndex != other.securityParamIndex) {
             return false;
         }
-        if (this.sequence != other.sequence) {
-            return false;
-        }
-        return true;
+        return this.sequence == other.sequence;
     }
 
     /**

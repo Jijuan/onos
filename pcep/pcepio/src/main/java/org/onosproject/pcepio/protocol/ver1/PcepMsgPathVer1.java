@@ -83,11 +83,7 @@ public class PcepMsgPathVer1 implements PcepMsgPath {
         this.eroObj = eroObj;
         isEroObjectSet = true;
         this.attrList = attrList;
-        if (attrList == null) {
-            isAttributeListSet = false;
-        } else {
-            isAttributeListSet = true;
-        }
+        isAttributeListSet = attrList != null;
     }
 
     @Override

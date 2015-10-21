@@ -155,10 +155,7 @@ public class NeighborSolicitation extends BasePacket {
         if (!Arrays.equals(this.targetAddress, other.targetAddress)) {
             return false;
         }
-        if (!this.options.equals(other.options)) {
-            return false;
-        }
-        return true;
+        return this.options.equals(other.options);
     }
 
     /**

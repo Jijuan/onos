@@ -310,10 +310,7 @@ public class IGMP extends BasePacket {
             return false;
         }
         // TODO: equals should be true regardless of order.
-        if (!groups.equals(other.groups)) {
-            return false;
-        }
-        return true;
+        return groups.equals(other.groups);
     }
 
     /*

@@ -225,6 +225,17 @@ public interface AsyncConsistentMap<K, V> {
     CompletableFuture<Versioned<V>> putIfAbsent(K key, V value);
 
     /**
+     * If the specified key is already associated with a value
+     * associates it with the given value and returns old value, else returns null.
+     *
+     * @param key key with which the specified value is to be associated
+     * @param value value to be associated with the specified key
+     * @return the previous value associated with the specified key or null
+     * if key does not already mapped to a value.
+     */
+    CompletableFuture<Versioned<V>> putIfPresent(K key, V value);
+
+    /**
      * Removes the entry for the specified key only if it is currently
      * mapped to the specified value.
      *

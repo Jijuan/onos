@@ -47,7 +47,8 @@ public abstract class SelectorLoop implements Runnable {
     private Throwable error;
 
     // State indicator
-    private enum State { STARTING, STARTED, STOPPING, STOPPED };
+    private enum State { STARTING, STARTED, STOPPING, STOPPED }
+
     private volatile State state = State.STOPPED;
 
     /**

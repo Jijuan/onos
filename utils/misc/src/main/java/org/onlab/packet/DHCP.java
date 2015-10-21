@@ -64,7 +64,7 @@ public class DHCP extends BasePacket {
 
         protected byte value;
 
-        private DHCPOptionCode(final byte value) {
+        DHCPOptionCode(final byte value) {
             this.value = value;
         }
 
@@ -461,8 +461,8 @@ public class DHCP extends BasePacket {
         for (int i = hardwareAddressLength; i < 16; ++i) {
             bb.get();
         }
-        this.serverName = this.readString(bb, 64);
-        this.bootFileName = this.readString(bb, 128);
+        this.serverName = readString(bb, 64);
+        this.bootFileName = readString(bb, 128);
         // read the magic cookie
         // magic cookie
         bb.get();

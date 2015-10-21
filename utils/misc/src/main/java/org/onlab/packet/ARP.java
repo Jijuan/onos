@@ -334,11 +334,8 @@ public class ARP extends BasePacket {
                 other.targetHardwareAddress)) {
             return false;
         }
-        if (!Arrays.equals(this.targetProtocolAddress,
-                other.targetProtocolAddress)) {
-            return false;
-        }
-        return true;
+        return Arrays.equals(this.targetProtocolAddress,
+                other.targetProtocolAddress);
     }
 
     /*

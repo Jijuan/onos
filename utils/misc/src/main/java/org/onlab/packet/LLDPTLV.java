@@ -157,9 +157,6 @@ public class LLDPTLV {
         if (this.type != other.type) {
             return false;
         }
-        if (!Arrays.equals(this.value, other.value)) {
-            return false;
-        }
-        return true;
+        return Arrays.equals(this.value, other.value);
     }
 }

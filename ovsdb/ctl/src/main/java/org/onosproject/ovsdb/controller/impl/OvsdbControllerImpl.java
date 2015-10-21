@@ -221,7 +221,7 @@ public class OvsdbControllerImpl implements OvsdbController {
 
         for (String tableName : updates.result().keySet()) {
             TableUpdate update = updates.result().get(tableName);
-            for (UUID uuid : (Set<UUID>) update.rows().keySet()) {
+            for (UUID uuid : update.rows().keySet()) {
                 log.debug("Begin to process table updates uuid: {}, databaseName: {}, tableName: {}",
                           uuid.value(), dbName, tableName);
 

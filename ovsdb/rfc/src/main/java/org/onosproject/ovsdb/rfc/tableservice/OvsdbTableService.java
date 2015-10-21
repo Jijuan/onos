@@ -28,43 +28,43 @@ public interface OvsdbTableService {
      * @param columndesc Column description
      * @return Column
      */
-    public Column getColumnHandler(ColumnDescription columndesc);
+    Column getColumnHandler(ColumnDescription columndesc);
 
     /**
      * Get Data from row.
      * @param columndesc Column description
      * @return Object column data
      */
-    public Object getDataHandler(ColumnDescription columndesc);
+    Object getDataHandler(ColumnDescription columndesc);
 
     /**
      * Set column data of row.
      * @param columndesc Column description
      * @param obj column data
      */
-    public void setDataHandler(ColumnDescription columndesc, Object obj);
+    void setDataHandler(ColumnDescription columndesc, Object obj);
 
     /**
      * Returns UUID which column name is _uuid.
      * @return UUID
      */
-    public UUID getTableUuid();
+    UUID getTableUuid();
 
     /**
      * Returns UUID Column which column name is _uuid.
      * @return UUID Column
      */
-    public Column getTableUuidColumn();
+    Column getTableUuidColumn();
 
     /**
      * Returns UUID which column name is _version.
      * @return UUID
      */
-    public UUID getTableVersion();
+    UUID getTableVersion();
 
     /**
      * Returns UUID Column which column name is _version.
      * @return UUID Column
      */
-    public Column getTableVersionColumn();
+    Column getTableVersionColumn();
 }

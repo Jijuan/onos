@@ -98,26 +98,10 @@ public class PcepStateReportVer1 implements PcepStateReport {
             this.attrList = attrList;
             this.rroObj = rroObj;
             this.bandwidth = bandwidth;
-            if (rroObj == null) {
-                this.isRroObjectSet = false;
-            } else {
-                this.isRroObjectSet = true;
-            }
-            if (eroObj == null) {
-                this.isEroObjectSet = false;
-            } else {
-                this.isEroObjectSet = true;
-            }
-            if (attrList == null) {
-                this.isAttributeListSet = false;
-            } else {
-                this.isAttributeListSet = true;
-            }
-            if (bandwidth == null) {
-                this.isBandwidthObjectSet = false;
-            } else {
-                this.isBandwidthObjectSet = true;
-            }
+            this.isRroObjectSet = rroObj != null;
+            this.isEroObjectSet = eroObj != null;
+            this.isAttributeListSet = attrList != null;
+            this.isBandwidthObjectSet = bandwidth != null;
         }
 
         /**

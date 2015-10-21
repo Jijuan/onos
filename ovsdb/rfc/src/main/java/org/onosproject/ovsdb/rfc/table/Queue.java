@@ -36,7 +36,7 @@ public class Queue extends AbstractOvsdbTableService {
 
         private final String columnName;
 
-        private QueueColumn(String columnName) {
+        QueueColumn(String columnName) {
             this.columnName = columnName;
         }
 
@@ -66,7 +66,7 @@ public class Queue extends AbstractOvsdbTableService {
     public Column getDscpColumn() {
         ColumnDescription columndesc = new ColumnDescription(QueueColumn.DSCP.columnName(), "getDscpColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -88,7 +88,7 @@ public class Queue extends AbstractOvsdbTableService {
     public Column getOtherConfigColumn() {
         ColumnDescription columndesc = new ColumnDescription(QueueColumn.OTHERCONFIG.columnName(),
                                                              "getOtherConfigColumn", VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -110,7 +110,7 @@ public class Queue extends AbstractOvsdbTableService {
     public Column getExternalIdsColumn() {
         ColumnDescription columndesc = new ColumnDescription(QueueColumn.EXTERNALIDS.columnName(),
                                                              "getExternalIdsColumn", VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**

@@ -220,7 +220,7 @@ public class DistributedLabelResourceStore
     }
 
     private boolean create(LabelResourcePool pool) {
-        Device device = (Device) deviceService.getDevice(pool.deviceId());
+        Device device = deviceService.getDevice(pool.deviceId());
         if (device == null) {
             return false;
         }
@@ -262,7 +262,7 @@ public class DistributedLabelResourceStore
 
     @Override
     public boolean destroyDevicePool(DeviceId deviceId) {
-        Device device = (Device) deviceService.getDevice(deviceId);
+        Device device = deviceService.getDevice(deviceId);
         if (device == null) {
             return false;
         }
@@ -305,7 +305,7 @@ public class DistributedLabelResourceStore
     @Override
     public Collection<LabelResource> applyFromDevicePool(DeviceId deviceId,
                                                          long applyNum) {
-        Device device = (Device) deviceService.getDevice(deviceId);
+        Device device = deviceService.getDevice(deviceId);
         if (device == null) {
             return Collections.emptyList();
         }
@@ -387,8 +387,8 @@ public class DistributedLabelResourceStore
         Set<DeviceId> deviceIdSet = maps.keySet();
         LabelResourceRequest request = null;
         for (Iterator<DeviceId> it = deviceIdSet.iterator(); it.hasNext();) {
-            DeviceId deviceId = (DeviceId) it.next();
-            Device device = (Device) deviceService.getDevice(deviceId);
+            DeviceId deviceId = it.next();
+            Device device = deviceService.getDevice(deviceId);
             if (device == null) {
                 continue;
             }

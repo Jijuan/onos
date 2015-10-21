@@ -96,26 +96,10 @@ public class PcepAttributeVer1 implements PcepAttribute {
         this.bandwidthObject = bandwidthObject;
         this.llMetricList = llMetricList;
         this.iroObject = iroObject;
-        if (lspaObject == null) {
-            this.isLspaObjectSet = false;
-        } else {
-            this.isLspaObjectSet = true;
-        }
-        if (bandwidthObject == null) {
-            this.isBandwidthObjectSet = false;
-        } else {
-            this.isBandwidthObjectSet = true;
-        }
-        if (llMetricList == null) {
-            this.isMetricListSet = false;
-        } else {
-            this.isMetricListSet = true;
-        }
-        if (iroObject == null) {
-            this.isIroObjectSet = false;
-        } else {
-            this.isIroObjectSet = true;
-        }
+        this.isLspaObjectSet = lspaObject != null;
+        this.isBandwidthObjectSet = bandwidthObject != null;
+        this.isMetricListSet = llMetricList != null;
+        this.isIroObjectSet = iroObject != null;
     }
 
     /**

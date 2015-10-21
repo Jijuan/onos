@@ -216,10 +216,7 @@ public class LLDPOrganizationalTLV extends LLDPTLV {
         if (this.subType != other.subType) {
             return false;
         }
-        if (!Arrays.equals(this.infoString, other.infoString)) {
-            return false;
-        }
+        return Arrays.equals(this.infoString, other.infoString);
 
-        return true;
     }
 }

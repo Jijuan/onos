@@ -462,10 +462,7 @@ public abstract class L2ModificationInstruction implements Instruction {
             if (this == obj) {
                 return true;
             }
-            if (obj instanceof ModMplsTtlInstruction) {
-                return true;
-            }
-            return false;
+            return obj instanceof ModMplsTtlInstruction;
         }
     }
 

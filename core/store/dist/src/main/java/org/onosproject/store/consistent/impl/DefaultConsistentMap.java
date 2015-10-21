@@ -141,8 +141,11 @@ public class DefaultConsistentMap<K, V> implements ConsistentMap<K, V> {
     }
 
     @Override
-    public Versioned<V> putIfAbsent(K key, V value) {
-        return complete(asyncMap.putIfAbsent(key, value));
+    public Versioned<V> putIfAbsent(K key, V value) { return complete(asyncMap.putIfAbsent(key, value)); }
+
+    @Override
+    public Versioned<V> putIfPresent(K key, V value) {
+        return complete(asyncMap.putIfPresent(key, value));
     }
 
     @Override

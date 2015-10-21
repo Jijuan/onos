@@ -212,10 +212,7 @@ public class Fragment extends BasePacket implements IExtensionHeader {
         if (this.moreFragment != other.moreFragment) {
             return false;
         }
-        if (this.identification != other.identification) {
-            return false;
-        }
-        return true;
+        return this.identification == other.identification;
     }
 
     /**

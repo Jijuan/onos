@@ -110,13 +110,13 @@ public class DistributedStatisticStore implements StatisticStore {
                 MESSAGE_HANDLER_THREAD_POOL_SIZE,
                 groupedThreads("onos/store/statistic", "message-handlers"));
 
-        clusterCommunicator.<ConnectPoint, Set<FlowEntry>>addSubscriber(GET_CURRENT,
+        clusterCommunicator.addSubscriber(GET_CURRENT,
                 SERIALIZER::decode,
                 this::getCurrentStatisticInternal,
                 SERIALIZER::encode,
                 messageHandlingExecutor);
 
-        clusterCommunicator.<ConnectPoint, Set<FlowEntry>>addSubscriber(GET_PREVIOUS,
+        clusterCommunicator.addSubscriber(GET_PREVIOUS,
                 SERIALIZER::decode,
                 this::getPreviousStatisticInternal,
                 SERIALIZER::encode,

@@ -32,7 +32,7 @@ public class OvsdbMapSerializer extends JsonSerializer<OvsdbMap> {
     @Override
     public void serialize(OvsdbMap map, JsonGenerator generator,
                           SerializerProvider provider)
-            throws IOException, JsonProcessingException {
+            throws IOException {
         generator.writeStartArray();
         generator.writeString("map");
         generator.writeStartArray();

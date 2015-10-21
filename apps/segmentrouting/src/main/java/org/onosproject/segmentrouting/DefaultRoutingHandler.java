@@ -491,11 +491,8 @@ public class DefaultRoutingHandler {
         log.debug("populateEcmpRoutingRulePartial in device{} towards {} for all MPLS rules",
                 targetSw, destSw);
         result = rulePopulator.populateMplsRule(targetSw, destSw, nextHops);
-        if (!result) {
-            return false;
-        }
+        return result;
 
-        return true;
     }
 
     /**

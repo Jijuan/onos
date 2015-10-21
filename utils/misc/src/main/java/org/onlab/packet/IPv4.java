@@ -447,11 +447,7 @@ s     */
             bb.get(this.options);
         }
 
-        if (this.totalLength != length) {
-            this.isTruncated = true;
-        } else {
-            this.isTruncated = false;
-        }
+        this.isTruncated = this.totalLength != length;
 
         Deserializer<? extends IPacket> deserializer;
         if (IPv4.PROTOCOL_DESERIALIZER_MAP.containsKey(this.protocol)) {
@@ -669,10 +665,7 @@ s     */
         if (this.ttl != other.ttl) {
             return false;
         }
-        if (this.version != other.version) {
-            return false;
-        }
-        return true;
+        return this.version == other.version;
     }
 
     /**
@@ -721,11 +714,7 @@ s     */
                                                     bb.limit() - bb.position());
             ipv4.payload.setParent(ipv4);
 
-            if (ipv4.totalLength != length) {
-                ipv4.isTruncated = true;
-            } else {
-                ipv4.isTruncated = false;
-            }
+            ipv4.isTruncated = ipv4.totalLength != length;
 
             return ipv4;
         };

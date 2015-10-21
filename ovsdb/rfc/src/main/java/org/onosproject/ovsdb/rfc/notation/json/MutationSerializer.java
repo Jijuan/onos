@@ -31,7 +31,7 @@ public class MutationSerializer extends JsonSerializer<Mutation> {
     @Override
     public void serialize(Mutation condition, JsonGenerator generator,
                           SerializerProvider provider)
-            throws IOException, JsonProcessingException {
+            throws IOException {
         generator.writeStartArray();
         generator.writeString(condition.getColumn());
         generator.writeString(condition.getMutator().mutator());

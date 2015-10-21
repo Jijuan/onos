@@ -338,10 +338,7 @@ public class IPv6 extends BasePacket implements IExtensionHeader {
         if (this.payloadLength != other.payloadLength) {
             return false;
         }
-        if (!Arrays.equals(this.sourceAddress, other.sourceAddress)) {
-            return false;
-        }
-        return true;
+        return Arrays.equals(this.sourceAddress, other.sourceAddress);
     }
 
     /**

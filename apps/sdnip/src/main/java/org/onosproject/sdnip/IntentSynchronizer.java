@@ -254,11 +254,8 @@ public class IntentSynchronizer implements IntentSynchronizationService {
             return;
         }
 
-        if (isElectedLeader) {
-            isActivatedLeader = true;       // Allow push of Intents
-        } else {
-            isActivatedLeader = false;
-        }
+        // Allow push of Intents
+        isActivatedLeader = isElectedLeader;
         log.debug("SDN-IP intent synchronization completed");
     }
 

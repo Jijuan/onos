@@ -47,7 +47,7 @@ public interface BGPNotificationMsg extends BGPMessage {
      * Builder interface with get and set functions to build Notification
      * message.
      */
-    public interface Builder extends BGPMessage.Builder {
+    interface Builder extends BGPMessage.Builder {
 
         @Override
         BGPNotificationMsg build() throws BGPParseException;

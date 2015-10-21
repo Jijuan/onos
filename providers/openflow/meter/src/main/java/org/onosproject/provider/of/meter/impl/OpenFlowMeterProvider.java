@@ -210,13 +210,10 @@ public class OpenFlowMeterProvider extends AbstractProvider implements MeterProv
     }
 
     private boolean isMeterSupported(OpenFlowSwitch sw) {
-        if (sw.factory().getVersion() == OFVersion.OF_10 ||
+        return !(sw.factory().getVersion() == OFVersion.OF_10 ||
                 sw.factory().getVersion() == OFVersion.OF_11 ||
-                sw.factory().getVersion() == OFVersion.OF_12) {
-            return false;
-        }
+                sw.factory().getVersion() == OFVersion.OF_12);
 
-        return true;
     }
 
     private void pushMeterStats(Dpid dpid, OFStatsReply msg) {

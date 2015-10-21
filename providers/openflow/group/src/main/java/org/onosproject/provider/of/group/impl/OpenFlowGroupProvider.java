@@ -278,13 +278,10 @@ public class OpenFlowGroupProvider extends AbstractProvider implements GroupProv
     }
 
     private boolean isGroupSupported(OpenFlowSwitch sw) {
-        if (sw.factory().getVersion() == OFVersion.OF_10 ||
+        return !(sw.factory().getVersion() == OFVersion.OF_10 ||
                 sw.factory().getVersion() == OFVersion.OF_11 ||
-                sw.factory().getVersion() == OFVersion.OF_12) {
-            return false;
-        }
+                sw.factory().getVersion() == OFVersion.OF_12);
 
-        return true;
     }
 
     private class InternalGroupProvider

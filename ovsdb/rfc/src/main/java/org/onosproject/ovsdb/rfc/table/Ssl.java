@@ -36,7 +36,7 @@ public class Ssl extends AbstractOvsdbTableService {
 
         private final String columnName;
 
-        private SslColumn(String columnName) {
+        SslColumn(String columnName) {
             this.columnName = columnName;
         }
 
@@ -66,7 +66,7 @@ public class Ssl extends AbstractOvsdbTableService {
     public Column getCaCertColumn() {
         ColumnDescription columndesc = new ColumnDescription(SslColumn.CACERT.columnName(),
                                                              "getCaCertColumn", VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -88,7 +88,7 @@ public class Ssl extends AbstractOvsdbTableService {
     public Column getExternalIdsColumn() {
         ColumnDescription columndesc = new ColumnDescription(SslColumn.EXTERNALIDS.columnName(),
                                                              "getExternalIdsColumn", VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -111,7 +111,7 @@ public class Ssl extends AbstractOvsdbTableService {
         ColumnDescription columndesc = new ColumnDescription(SslColumn.BOOTSTRAPCACERT.columnName(),
                                                              "getBootstrapCaCertColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -134,7 +134,7 @@ public class Ssl extends AbstractOvsdbTableService {
     public Column getCertificateColumn() {
         ColumnDescription columndesc = new ColumnDescription(SslColumn.CERTIFICATE.columnName(),
                                                              "getCertificateColumn", VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -156,7 +156,7 @@ public class Ssl extends AbstractOvsdbTableService {
     public Column getPrivateKeyColumn() {
         ColumnDescription columndesc = new ColumnDescription(SslColumn.PRIVATEKEY.columnName(),
                                                              "getPrivateKeyColumn", VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**

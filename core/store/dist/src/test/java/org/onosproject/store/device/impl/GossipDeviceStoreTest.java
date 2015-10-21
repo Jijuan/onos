@@ -184,7 +184,7 @@ public class GossipDeviceStoreTest {
                 new DefaultDeviceDescription(deviceId.uri(), SWITCH, MFR,
                         HW, swVersion, SN, CID, annotations);
         reset(clusterCommunicator);
-        clusterCommunicator.<InternalDeviceEvent>broadcast(
+        clusterCommunicator.broadcast(
                 anyObject(InternalDeviceEvent.class), anyObject(MessageSubject.class), anyObject(Function.class));
         expectLastCall().anyTimes();
         replay(clusterCommunicator);

@@ -266,13 +266,15 @@ public class MessagingPerfApp {
     }
 
     private void registerMessageHandlers() {
-        communicationService.<Data>addSubscriber(
+        communicationService.addSubscriber(
                 TEST_UNICAST_MESSAGE_TOPIC,
                 decoder,
-                d -> { received.incrementAndGet(); },
+                d -> {
+                    received.incrementAndGet();
+                },
                 messageReceivingExecutor);
 
-        communicationService.<Data, Data>addSubscriber(
+        communicationService.addSubscriber(
                 TEST_REQUEST_REPLY_TOPIC,
                 decoder,
                 Function.identity(),
@@ -297,7 +299,7 @@ public class MessagingPerfApp {
         try {
             attempted.incrementAndGet();
             CompletableFuture<Data> response =
-                    communicationService.<Data, Data>sendAndReceive(
+                    communicationService.sendAndReceive(
                             data,
                             TEST_REQUEST_REPLY_TOPIC,
                             encoder,
@@ -317,7 +319,7 @@ public class MessagingPerfApp {
     private void unicast() {
         try {
             sent.incrementAndGet();
-            communicationService.<Data>unicast(
+            communicationService.unicast(
                     data,
                     TEST_UNICAST_MESSAGE_TOPIC,
                     encoder,
@@ -331,7 +333,7 @@ public class MessagingPerfApp {
     private void broadcast() {
         try {
             sent.incrementAndGet();
-            communicationService.<Data>broadcast(
+            communicationService.broadcast(
                     data,
                     TEST_UNICAST_MESSAGE_TOPIC,
                     encoder);

@@ -55,7 +55,7 @@ public class SuurballeGraphSearch<V extends Vertex, E extends Edge<V>> extends D
             //transforms the graph so tree edges have 0 weight
             EdgeWeight<V, Edge<V>> modified = edge -> {
                 if (classE().isInstance(edge)) {
-                    return weightf.weight((E) (edge)) + firstDijkstra.cost(edge.src())
+                    return weightf.weight(edge) + firstDijkstra.cost(edge.src())
                             - firstDijkstra.cost(edge.dst());
                 }
                 return 0;
@@ -150,7 +150,7 @@ public class SuurballeGraphSearch<V extends Vertex, E extends Edge<V>> extends D
                 Set<Path<V, E>> pathsD = new HashSet<>();
                 int paths = 0;
                 for (DisjointPathPair<V, E> path: dpps) {
-                    pathsD.add((Path<V, E>) path);
+                    pathsD.add(path);
                     paths++;
                     if (paths == maxPaths) {
                         break;

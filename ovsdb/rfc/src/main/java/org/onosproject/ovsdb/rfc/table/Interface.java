@@ -50,7 +50,7 @@ public class Interface extends AbstractOvsdbTableService {
 
         private final String columnName;
 
-        private InterfaceColumn(String columnName) {
+        InterfaceColumn(String columnName) {
             this.columnName = columnName;
         }
 
@@ -83,7 +83,7 @@ public class Interface extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getNameColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -125,7 +125,7 @@ public class Interface extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getTypeColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -153,7 +153,7 @@ public class Interface extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getOptionsColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -181,7 +181,7 @@ public class Interface extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getIngressPolicingRateColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -210,7 +210,7 @@ public class Interface extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getIngressPolicingBurstColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -239,7 +239,7 @@ public class Interface extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getMacInUseColumn",
                                                              VersionNum.VERSION710);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -267,7 +267,7 @@ public class Interface extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getMacColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -295,7 +295,7 @@ public class Interface extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getIfIndexColumn",
                                                              VersionNum.VERSION721);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -323,7 +323,7 @@ public class Interface extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getExternalIdsColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -351,7 +351,7 @@ public class Interface extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getOpenFlowPortColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -379,7 +379,7 @@ public class Interface extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getOpenFlowPortRequestColumn",
                                                              VersionNum.VERSION620);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -408,7 +408,7 @@ public class Interface extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getBfdColumn",
                                                              VersionNum.VERSION720);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -436,7 +436,7 @@ public class Interface extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getBfdStatusColumn",
                                                              VersionNum.VERSION720);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -465,7 +465,7 @@ public class Interface extends AbstractOvsdbTableService {
                                                              "getMonitorColumn",
                                                              VersionNum.VERSION100,
                                                              VersionNum.VERSION350);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -494,7 +494,7 @@ public class Interface extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getCfmMpidColumn",
                                                              VersionNum.VERSION400);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -523,7 +523,7 @@ public class Interface extends AbstractOvsdbTableService {
                                                              "getCfmRemoteMpidColumn",
                                                              VersionNum.VERSION400,
                                                              VersionNum.VERSION520);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -553,7 +553,7 @@ public class Interface extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getCfmRemoteMpidsColumn",
                                                              VersionNum.VERSION600);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -582,7 +582,7 @@ public class Interface extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getCfmFlapCountColumn",
                                                              VersionNum.VERSION730);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -610,7 +610,7 @@ public class Interface extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getCfmFaultColumn",
                                                              VersionNum.VERSION400);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -638,7 +638,7 @@ public class Interface extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getCfmFaultStatusColumn",
                                                              VersionNum.VERSION660);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -667,7 +667,7 @@ public class Interface extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getCfmRemoteOpStateColumn",
                                                              VersionNum.VERSION6100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -696,7 +696,7 @@ public class Interface extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getCfmHealthColumn",
                                                              VersionNum.VERSION690);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -724,7 +724,7 @@ public class Interface extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getLacpCurrentColumn",
                                                              VersionNum.VERSION330);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -752,7 +752,7 @@ public class Interface extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getOtherConfigColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -780,7 +780,7 @@ public class Interface extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getStatisticsColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -808,7 +808,7 @@ public class Interface extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getStatusColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -836,7 +836,7 @@ public class Interface extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getAdminStateColumn",
                                                              VersionNum.VERSION106);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -864,7 +864,7 @@ public class Interface extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getLinkStateColumn",
                                                              VersionNum.VERSION106);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -892,7 +892,7 @@ public class Interface extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getLinkResetsColumn",
                                                              VersionNum.VERSION620);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -920,7 +920,7 @@ public class Interface extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getLinkSpeedColumn",
                                                              VersionNum.VERSION106);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -948,7 +948,7 @@ public class Interface extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getDuplexColumn",
                                                              VersionNum.VERSION106);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -976,7 +976,7 @@ public class Interface extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getMtuColumn",
                                                              VersionNum.VERSION106);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -1004,7 +1004,7 @@ public class Interface extends AbstractOvsdbTableService {
                                                                      .columnName(),
                                                              "getErrorColumn",
                                                              VersionNum.VERSION770);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**

@@ -210,7 +210,7 @@ public abstract class AbstractOvsdbTableService implements OvsdbTableService {
             return null;
         }
         ColumnDescription columnDesc = new ColumnDescription("_uuid", "getTableUuidColumn");
-        return (Column) getColumnHandler(columnDesc);
+        return getColumnHandler(columnDesc);
     }
 
     @Override
@@ -228,7 +228,7 @@ public abstract class AbstractOvsdbTableService implements OvsdbTableService {
             return null;
         }
         ColumnDescription columnDesc = new ColumnDescription("_version", "getTableVersionColumn");
-        return (Column) getColumnHandler(columnDesc);
+        return getColumnHandler(columnDesc);
     }
 
     /**
@@ -277,7 +277,7 @@ public abstract class AbstractOvsdbTableService implements OvsdbTableService {
 
     @Override
     public String toString() {
-        TableSchema schema = (TableSchema) getTableSchema();
+        TableSchema schema = getTableSchema();
         String tableName = schema.name();
         return toStringHelper(this).add("tableName", tableName).add("row", row).toString();
     }

@@ -162,8 +162,8 @@ public class MRibCodec extends JsonCodec<McastRouteTable> {
         String portNo = null;
         String sAddr = json.path(SOURCE_ADDRESS).asText();
         String gAddr = json.path(GROUP_ADDRESS).asText();
-        JsonNode inPntObjNode = (JsonNode) json.path(INGRESS_POINT);
-        JsonNode egPntArrNode = (JsonNode) json.path(EGRESS_POINT);
+        JsonNode inPntObjNode = json.path(INGRESS_POINT);
+        JsonNode egPntArrNode = json.path(EGRESS_POINT);
 
         log.debug("sAddr :" + sAddr + " gAddr :" + gAddr + " inPntObjNode :" + inPntObjNode);
         log.debug("egPntArrNode :" + egPntArrNode.toString());

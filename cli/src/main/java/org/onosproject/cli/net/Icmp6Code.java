@@ -60,7 +60,7 @@ public enum Icmp6Code {
      *
      * @param value value to use when this Icmp6Code is seen
      */
-    private Icmp6Code(byte value) {
+    Icmp6Code(byte value) {
         this.value = value;
     }
 

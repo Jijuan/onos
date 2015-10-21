@@ -38,14 +38,14 @@ public interface Operation {
      * Operations must be "insert", "select", "update", "mutate", "delete",
      * "commit", "abort", "comment", "assert". Refer to RFC 7047 Section 5.2.
      */
-    public enum Operations {
+    enum Operations {
         INSERT("insert"), SELECT("select"), UPDATE("update"), MUTATE("mutate"),
         DELETE("delete"), COMMIT("commit"), ABORT("abort"), COMMENT("comment"),
         ASSERT("assert");
 
         private String op;
 
-        private Operations(String op) {
+        Operations(String op) {
             this.op = op;
         }
 

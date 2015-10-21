@@ -382,10 +382,7 @@ public class FlowRuleManager
                 return false;
             }
 
-            if ((currentTime - last) <= timeout) {
-                return true;
-            }
-            return false;
+            return (currentTime - last) <= timeout;
         }
 
         @Override

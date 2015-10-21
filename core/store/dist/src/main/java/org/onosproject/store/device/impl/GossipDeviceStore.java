@@ -1014,12 +1014,8 @@ public class GossipDeviceStore
      */
     private boolean isDeviceRemoved(DeviceId deviceId, Timestamp timestampToCheck) {
         Timestamp removalTimestamp = removalRequest.get(deviceId);
-        if (removalTimestamp != null &&
-                removalTimestamp.compareTo(timestampToCheck) >= 0) {
-            // removalRequest is more recent
-            return true;
-        }
-        return false;
+        return removalTimestamp != null &&
+                removalTimestamp.compareTo(timestampToCheck) >= 0;
     }
 
     /**

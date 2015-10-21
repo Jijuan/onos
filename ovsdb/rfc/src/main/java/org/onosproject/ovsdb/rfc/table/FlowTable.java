@@ -37,7 +37,7 @@ public class FlowTable extends AbstractOvsdbTableService {
 
         private final String columnName;
 
-        private FlowTableColumn(String columnName) {
+        FlowTableColumn(String columnName) {
             this.columnName = columnName;
         }
 
@@ -67,7 +67,7 @@ public class FlowTable extends AbstractOvsdbTableService {
     public Column getFlowLimitColumn() {
         ColumnDescription columndesc = new ColumnDescription(FlowTableColumn.FLOWLIMIT.columnName(),
                                                              "getFlowLimitColumn", VersionNum.VERSION650);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -89,7 +89,7 @@ public class FlowTable extends AbstractOvsdbTableService {
     public Column getOverflowPolicyColumn() {
         ColumnDescription columndesc = new ColumnDescription(FlowTableColumn.OVERFLOWPOLICY.columnName(),
                                                              "getOverflowPolicyColumn", VersionNum.VERSION650);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -112,7 +112,7 @@ public class FlowTable extends AbstractOvsdbTableService {
     public Column getGroupsColumn() {
         ColumnDescription columndesc = new ColumnDescription(FlowTableColumn.GROUPS.columnName(),
                                                              "getGroupsColumn", VersionNum.VERSION650);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -134,7 +134,7 @@ public class FlowTable extends AbstractOvsdbTableService {
     public Column getNameColumn() {
         ColumnDescription columndesc = new ColumnDescription(FlowTableColumn.NAME.columnName(),
                                                              "getNameColumn", VersionNum.VERSION650);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -157,7 +157,7 @@ public class FlowTable extends AbstractOvsdbTableService {
     public Column getPrefixesColumn() {
         ColumnDescription columndesc = new ColumnDescription(FlowTableColumn.PREFIXES.columnName(),
                                                              "getPrefixesColumn", VersionNum.VERSION740);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -179,7 +179,7 @@ public class FlowTable extends AbstractOvsdbTableService {
     public Column getExternalIdsColumn() {
         ColumnDescription columndesc = new ColumnDescription(FlowTableColumn.EXTERNALIDS.columnName(),
                                                              "getExternalIdsColumn", VersionNum.VERSION750);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**

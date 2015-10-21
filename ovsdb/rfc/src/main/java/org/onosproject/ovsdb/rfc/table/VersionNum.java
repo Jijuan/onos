@@ -33,7 +33,7 @@ public enum VersionNum {
 
     private final String versionNum;
 
-    private VersionNum(String versionNum) {
+    VersionNum(String versionNum) {
         this.versionNum = versionNum;
     }
 

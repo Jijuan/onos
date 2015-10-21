@@ -57,7 +57,7 @@ public final class PIMTest {
         // Create a PIM Hello
         pimHello = new PIM();
         pimHello.setVersion((byte) 2);
-        pimHello.setPIMType((byte) PIM.TYPE_HELLO);
+        pimHello.setPIMType(PIM.TYPE_HELLO);
         pimHello.setChecksum((short) 0);
 
         hello = new PIMHello();
@@ -68,7 +68,7 @@ public final class PIMTest {
         // Create PIM Join Prune
         pimJoinPrune = new PIM();
         pimJoinPrune.setVersion((byte) 2);
-        pimJoinPrune.setPIMType((byte) PIM.TYPE_JOIN_PRUNE_REQUEST);
+        pimJoinPrune.setPIMType(PIM.TYPE_JOIN_PRUNE_REQUEST);
         pimJoinPrune.setChecksum((short) 0);
 
         joinPrune = new PIMJoinPrune();

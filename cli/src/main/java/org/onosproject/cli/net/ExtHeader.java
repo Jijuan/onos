@@ -45,7 +45,7 @@ public enum ExtHeader {
      *
      * @param value value to use when this ExtHeader is seen
      */
-    private ExtHeader(short value) {
+    ExtHeader(short value) {
         this.value = value;
     }
 

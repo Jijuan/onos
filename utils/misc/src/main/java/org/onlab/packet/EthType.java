@@ -138,11 +138,8 @@ public class EthType {
 
         EthType ethType = (EthType) o;
 
-        if (etherType != ethType.etherType) {
-            return false;
-        }
+        return etherType == ethType.etherType;
 
-        return true;
     }
 
     @Override

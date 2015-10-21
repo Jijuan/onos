@@ -849,7 +849,7 @@ public class NewAdaptiveFlowStatsCollector {
 
             TypedStoredFlowEntry removeStore = getFlowEntryInternal(rule);
             if (removeStore != null) {
-                removeLiveFlowsInternal((TypedStoredFlowEntry) removeStore);
+                removeLiveFlowsInternal(removeStore);
                 boolean result = getFlowEntriesInternal(rule.id()).remove(removeStore);
 
                 if (result) {

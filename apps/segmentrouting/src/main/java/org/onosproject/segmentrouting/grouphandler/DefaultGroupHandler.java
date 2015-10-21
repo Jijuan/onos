@@ -331,11 +331,8 @@ public class DefaultGroupHandler {
     public boolean hasNextObjectiveId(NeighborSet ns) {
         Integer nextId = nsNextObjStore.
                 get(new NeighborSetNextObjectiveStoreKey(deviceId, ns));
-        if (nextId == null) {
-            return false;
-        }
+        return nextId != null;
 
-        return true;
     }
 
     // Empty implementation

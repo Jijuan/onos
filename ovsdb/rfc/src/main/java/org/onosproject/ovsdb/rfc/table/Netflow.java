@@ -37,7 +37,7 @@ public class Netflow extends AbstractOvsdbTableService {
 
         private final String columnName;
 
-        private NetflowColumn(String columnName) {
+        NetflowColumn(String columnName) {
             this.columnName = columnName;
         }
 
@@ -67,7 +67,7 @@ public class Netflow extends AbstractOvsdbTableService {
     public Column getTargetsColumn() {
         ColumnDescription columndesc = new ColumnDescription(NetflowColumn.TARGETS.columnName(),
                                                              "getTargetsColumn", VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -89,7 +89,7 @@ public class Netflow extends AbstractOvsdbTableService {
     public Column getActiveTimeoutColumn() {
         ColumnDescription columndesc = new ColumnDescription(NetflowColumn.ACTIVETIMEOUT.columnName(),
                                                              "getActiveTimeoutColumn", VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -112,7 +112,7 @@ public class Netflow extends AbstractOvsdbTableService {
     public Column getEngineTypeColumn() {
         ColumnDescription columndesc = new ColumnDescription(NetflowColumn.ENGINETYPE.columnName(),
                                                              "getEngineTypeColumn", VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -134,7 +134,7 @@ public class Netflow extends AbstractOvsdbTableService {
     public Column getExternalIdsColumn() {
         ColumnDescription columndesc = new ColumnDescription(NetflowColumn.EXTERNALIDS.columnName(),
                                                              "getExternalIdsColumn", VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -157,7 +157,7 @@ public class Netflow extends AbstractOvsdbTableService {
         ColumnDescription columndesc = new ColumnDescription(NetflowColumn.ADDIDTOINTERFACE.columnName(),
                                                              "getAddIdToInterfaceColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -180,7 +180,7 @@ public class Netflow extends AbstractOvsdbTableService {
     public Column getEngineIdColumn() {
         ColumnDescription columndesc = new ColumnDescription(NetflowColumn.ENGINETYPE.columnName(),
                                                              "getEngineIdColumn", VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**

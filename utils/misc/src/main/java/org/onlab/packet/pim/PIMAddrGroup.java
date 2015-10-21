@@ -249,9 +249,6 @@ public class PIMAddrGroup {
             return false;
         }
 
-        if (!this.addr.equals(other.addr)) {
-            return false;
-        }
-        return true;
+        return this.addr.equals(other.addr);
     }
 }

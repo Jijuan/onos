@@ -164,7 +164,7 @@ public class GossipLinkStoreTest {
         ConnectPoint src = new ConnectPoint(srcId, srcNum);
         ConnectPoint dst = new ConnectPoint(dstId, dstNum);
         reset(clusterCommunicator);
-        clusterCommunicator.<InternalLinkEvent>broadcast(
+        clusterCommunicator.broadcast(
                 anyObject(InternalLinkEvent.class), anyObject(MessageSubject.class), anyObject(Function.class));
         expectLastCall().anyTimes();
         replay(clusterCommunicator);

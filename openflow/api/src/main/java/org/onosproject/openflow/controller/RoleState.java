@@ -30,7 +30,7 @@ public enum RoleState {
     MASTER(OFControllerRole.ROLE_MASTER),
     SLAVE(OFControllerRole.ROLE_SLAVE);
 
-    private RoleState(OFControllerRole nxRole) {
+    RoleState(OFControllerRole nxRole) {
         nxRole.ordinal();
     }
 

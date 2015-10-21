@@ -28,7 +28,7 @@ public class McastConnectPoint {
     private ConnectPoint connectPoint;
 
     public enum JoinSource {
-        STATIC, IGMP, PIM;
+        STATIC, IGMP, PIM
     }
 
     public EnumSet<JoinSource> interest = EnumSet.noneOf(JoinSource.class);

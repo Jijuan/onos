@@ -36,7 +36,7 @@ public class FlowSampleCollectorSet extends AbstractOvsdbTableService {
 
         private final String columnName;
 
-        private FlowSampleCollectorSetColumn(String columnName) {
+        FlowSampleCollectorSetColumn(String columnName) {
             this.columnName = columnName;
         }
 
@@ -67,7 +67,7 @@ public class FlowSampleCollectorSet extends AbstractOvsdbTableService {
     public Column getIdColumn() {
         ColumnDescription columndesc = new ColumnDescription(FlowSampleCollectorSetColumn.ID.columnName(),
                                                              "getIdColumn", VersionNum.VERSION710);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -89,7 +89,7 @@ public class FlowSampleCollectorSet extends AbstractOvsdbTableService {
     public Column getBridgeColumn() {
         ColumnDescription columndesc = new ColumnDescription(FlowSampleCollectorSetColumn.BRIDGE.columnName(),
                                                              "getBridgeColumn", VersionNum.VERSION710);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -111,7 +111,7 @@ public class FlowSampleCollectorSet extends AbstractOvsdbTableService {
     public Column getIpfixColumn() {
         ColumnDescription columndesc = new ColumnDescription(FlowSampleCollectorSetColumn.IPFIX.columnName(),
                                                              "getIpfixColumn", VersionNum.VERSION710);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -134,7 +134,7 @@ public class FlowSampleCollectorSet extends AbstractOvsdbTableService {
         ColumnDescription columndesc = new ColumnDescription(FlowSampleCollectorSetColumn.EXTERNALIDS
                                                                      .columnName(),
                                                              "getExternalIdsColumn", VersionNum.VERSION710);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**

@@ -101,10 +101,7 @@ public class Data extends BasePacket {
             return false;
         }
         final Data other = (Data) obj;
-        if (!Arrays.equals(this.data, other.data)) {
-            return false;
-        }
-        return true;
+        return Arrays.equals(this.data, other.data);
     }
 
     /**

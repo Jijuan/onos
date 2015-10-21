@@ -76,6 +76,7 @@ public class DefaultAsyncConsistentMap<K, V>  implements AsyncConsistentMap<K, V
     private static final String PUT = "put";
     private static final String PUT_AND_GET = "putAndGet";
     private static final String PUT_IF_ABSENT = "putIfAbsent";
+    private static final String PUT_IF_PRESENT = "putIfPresent";
     private static final String REMOVE = "remove";
     private static final String CLEAR = "clear";
     private static final String KEY_SET = "keySet";
@@ -363,6 +364,16 @@ public class DefaultAsyncConsistentMap<K, V>  implements AsyncConsistentMap<K, V
         checkNotNull(value, ERROR_NULL_VALUE);
         final MeteringAgent.Context timer = monitor.startTimer(PUT_IF_ABSENT);
         return updateAndGet(key, Match.ifNull(), Match.any(), value)
+                .whenComplete((r, e) -> timer.stop(e))
+                .thenApply(v -> v.oldValue());
+    }
+
+    @Override
+    public CompletableFuture<Versioned<V>> putIfPresent(K key, V value) {
+        checkNotNull(key, ERROR_NULL_KEY);
+        checkNotNull(value, ERROR_NULL_VALUE);
+        final MeteringAgent.Context timer = monitor.startTimer(PUT_IF_PRESENT);
+        return updateAndGet(key, Match.any(), Match.any(), value)
                 .whenComplete((r, e) -> timer.stop(e))
                 .thenApply(v -> v.oldValue());
     }

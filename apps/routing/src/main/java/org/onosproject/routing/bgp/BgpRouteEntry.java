@@ -137,11 +137,8 @@ public class BgpRouteEntry extends RouteEntry {
             return true;                // Local route: no path segments
         }
         // If the first path segment is AS_SET, the route is considered local
-        if (firstPathSegment.getType() == BgpConstants.Update.AsPath.AS_SET) {
-            return true;
-        }
+        return firstPathSegment.getType() == BgpConstants.Update.AsPath.AS_SET;
 
-        return false;                   // The route is not local
     }
 
     /**

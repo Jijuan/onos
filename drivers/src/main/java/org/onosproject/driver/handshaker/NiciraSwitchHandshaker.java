@@ -25,10 +25,7 @@ public class NiciraSwitchHandshaker extends DefaultSwitchHandshaker {
 
     @Override
     public Boolean supportNxRole() {
-        if (this.factory().getVersion() == OFVersion.OF_10) {
-            return true;
-        }
-        return false;
+        return this.factory().getVersion() == OFVersion.OF_10;
     }
 
 }

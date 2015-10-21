@@ -39,7 +39,7 @@ public class Mirror extends AbstractOvsdbTableService {
 
         private final String columnName;
 
-        private MirrorColumn(String columnName) {
+        MirrorColumn(String columnName) {
             this.columnName = columnName;
         }
 
@@ -70,7 +70,7 @@ public class Mirror extends AbstractOvsdbTableService {
         ColumnDescription columndesc = new ColumnDescription(MirrorColumn.NAME.columnName(),
                                                              "getNameColumn",
                                                              VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -105,7 +105,7 @@ public class Mirror extends AbstractOvsdbTableService {
     public Column getSelectSrcPortColumn() {
         ColumnDescription columndesc = new ColumnDescription(MirrorColumn.SELECTSRCPORT.columnName(),
                                                              "getSelectSrcPortColumn", VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -128,7 +128,7 @@ public class Mirror extends AbstractOvsdbTableService {
     public Column getSelectDstPortColumn() {
         ColumnDescription columndesc = new ColumnDescription(MirrorColumn.SELECTDSTPORT.columnName(),
                                                              "getSelectDstPortColumn", VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -151,7 +151,7 @@ public class Mirror extends AbstractOvsdbTableService {
     public Column getSelectVlanColumn() {
         ColumnDescription columndesc = new ColumnDescription(MirrorColumn.SELECTVLAN.columnName(),
                                                              "getSelectVlanColumn", VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -173,7 +173,7 @@ public class Mirror extends AbstractOvsdbTableService {
     public Column getOutputPortColumn() {
         ColumnDescription columndesc = new ColumnDescription(MirrorColumn.OUTPUTPORT.columnName(),
                                                              "getOutputPortColumn", VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -195,7 +195,7 @@ public class Mirror extends AbstractOvsdbTableService {
     public Column getOutputVlanColumn() {
         ColumnDescription columndesc = new ColumnDescription(MirrorColumn.OUTPUTVLAN.columnName(),
                                                              "getOutputVlanColumn", VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -217,7 +217,7 @@ public class Mirror extends AbstractOvsdbTableService {
     public Column getStatisticsColumn() {
         ColumnDescription columndesc = new ColumnDescription(MirrorColumn.STATISTICS.columnName(),
                                                              "getStatisticsColumn", VersionNum.VERSION640);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -239,7 +239,7 @@ public class Mirror extends AbstractOvsdbTableService {
     public Column getExternalIdsColumn() {
         ColumnDescription columndesc = new ColumnDescription(MirrorColumn.EXTERNALIDS.columnName(),
                                                              "getExternalIdsColumn", VersionNum.VERSION100);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**
@@ -261,7 +261,7 @@ public class Mirror extends AbstractOvsdbTableService {
     public Column getSelectAllColumn() {
         ColumnDescription columndesc = new ColumnDescription(MirrorColumn.SELECTALL.columnName(),
                                                              "getSelectAllColumn", VersionNum.VERSION620);
-        return (Column) super.getColumnHandler(columndesc);
+        return super.getColumnHandler(columndesc);
     }
 
     /**

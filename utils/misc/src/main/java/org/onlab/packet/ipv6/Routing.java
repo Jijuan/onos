@@ -245,10 +245,7 @@ public class Routing extends BasePacket implements IExtensionHeader {
         if (this.segmentsLeft != other.segmentsLeft) {
             return false;
         }
-        if (!Arrays.equals(this.routingData, other.routingData)) {
-            return false;
-        }
-        return true;
+        return Arrays.equals(this.routingData, other.routingData);
     }
 
     /**
